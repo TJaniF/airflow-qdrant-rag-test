@@ -33,7 +33,7 @@ _INGESTION_BATCH_SIZE = int(os.getenv("INGESTION_BATCH_SIZE", 10))
     max_active_runs=1, # To prevent parallel requests to the local Qdrant database
     tags=["RAG"],
     default_args={
-        "retries": 0,
+        "retries": 3,
         "retry_delay": duration(seconds=10),
         "owner": "AI Task Force",
     },
