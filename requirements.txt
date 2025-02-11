@@ -1,0 +1,3 @@
+# Astro Runtime includes the following pre-installed providers packages: https://www.astronomer.io/docs/astro/runtime-image-architecture#provider-packages
+qdrant-client==1.13.2
+fastembed==0.5.1
