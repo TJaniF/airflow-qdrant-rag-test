@@ -40,9 +40,9 @@ _EMBEDDING_MODEL = os.getenv(
             "A philosophical book",
             type="string",
             title="Book Mood To Query for",
-            description="Enter a description of the type of book you'd like to read.",
+            description="Enter a description of the type of book you'd like to read (1-500 characters)",
             minLength=1,
-            maxLength=200,
+            maxLength=500,
         )
     },
 )

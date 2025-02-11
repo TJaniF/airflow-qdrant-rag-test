@@ -21,7 +21,6 @@ _VECTOR_SIZE = int(os.getenv("VECTOR_SIZE", 128))
 _EMBEDDING_MODEL = os.getenv(
     "EMBEDDING_MODEL", "colbert-ir/colbertv2.0"
 )  # other option: answerdotai/answerai-colbert-small-v1 (96 dim)
-_INGESTION_BATCH_SIZE = int(os.getenv("INGESTION_BATCH_SIZE", 10))
 
 
 @dag(
