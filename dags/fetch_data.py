@@ -30,6 +30,7 @@ _INGESTION_BATCH_SIZE = int(os.getenv("INGESTION_BATCH_SIZE", 10))
     schedule="@daily",
     catchup=False,
     max_consecutive_failed_dag_runs=5,
+    max_active_runs=1, # To prevent parallel requests to the local Qdrant database
     tags=["RAG"],
     default_args={
         "retries": 0,

@@ -21,11 +21,12 @@ _EMBEDDING_MODEL = os.getenv(
 
 
 @dag(
-    dag_display_name="Query Book Knowledge",
+    dag_display_name="🔍 Query Book Knowledge",
     start_date=datetime(2025, 1, 1),
     schedule=Dataset("qdrant://my_books_collection"),
     catchup=False,
     max_consecutive_failed_dag_runs=5,
+    max_active_runs=1, # To prevent parallel requests to the local Qdrant database
     tags=["Query"],
     default_args={
         "retries": 0,
